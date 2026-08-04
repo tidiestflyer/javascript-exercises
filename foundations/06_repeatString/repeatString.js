@@ -1,17 +1,11 @@
-let input = "";
-let output = "";
-let count = 0;
-
 const repeatString = function(input, count) {
-output = ""
-if (count < 0) {
-    return "ERROR";
-} else {
-    for (i = 0; i < count; i++) {
-    output = output + input;
+    if (count < 0) return "ERROR";
+
+    builtString = "";
+    for(i = 0; i < count; i++) {
+        builtString +=input;
     }
-    return output;
-    }
+    return builtString;
 }
 
 // Do not edit below this line
