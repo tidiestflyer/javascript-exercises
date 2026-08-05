@@ -1,19 +1,13 @@
-const convertToCelsius = function() {
+const convertToCelsius = function(temp) {
   // formula for conversion (32°F − 32) × 5/9 = 0°C
-  let input = arguments[0];
-  let output = (input - 32) * 5 / 9;
-  output = Math.round(output * 10) / 10;
-  console.log(output);
-  return output;
+  temp = (temp - 32) * 5 / 9;
+  return Math.round(temp * 10) / 10;
 };
 
-const convertToFahrenheit = function() {
+const convertToFahrenheit = function(temp) {
   // formula for conversion (32°C * 9/5) + 32 = 89.6°F
-  let input = arguments[0]
-  let output = (input * 9 / 5) + 32;
-  output = Math.round(output * 10) / 10;
-  console.log(output);
-  return output;
+  temp = (temp * 9 / 5) + 32;
+  return Math.round(temp * 10) / 10;
 };
 
 // Do not edit below this line
