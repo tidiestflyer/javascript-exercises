@@ -1,24 +1,11 @@
-let arrayToModify = "";
 
-const removeFromArray = function() {
-    for (i = 0; i < (arguments.length - 1); i++) {
-        let toDelete = arguments[i + 1];
-        console.log(toDelete);
-
-        for (i1 = 0; i1 < (arguments[0].length); i1++) {
-            arrayToModify = arguments[0];
-            console.log(arrayToModify[i1] + " " + toDelete);
-            if (arrayToModify[i1] === toDelete) {
-                console.log("Matched, delete this statement");
-                arrayToModify.splice([i1], 1);
-                i1 = 0;
-            } else {
-                console.log("If did not match...")
-            }
-        }
+const removeFromArray = function(arr) {
+    inputArray = arr;
+    for(i = 1; i < arguments.length; i++) {
+        inputArray = inputArray.filter((num) => num !== arguments[i]);
     }
-    console.log(arrayToModify);
-    return arrayToModify;
-};
+    return inputArray;
+}
+
 // Do not edit below this line
 module.exports = removeFromArray;
