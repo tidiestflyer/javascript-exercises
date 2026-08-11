@@ -20,7 +20,8 @@ const multiply = function(numbers) {
   return numbers.reduce((acc, curr) => acc = acc * curr, start);
 };
 
-const power = function() {
+const power = function(number, power) {
+  return number ** power;
 };
 
 const factorial = function() {
