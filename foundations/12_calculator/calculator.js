@@ -14,10 +14,7 @@ const sum = function(numbers) {
 };
 
 const multiply = function(numbers) {
-  if((typeof start) == "undefined") {
-    start = 1;
-  }
-  return numbers.reduce((acc, curr) => acc = acc * curr, start);
+  return numbers.reduce((acc, curr) => acc = acc * curr, 1);
 };
 
 const power = function(number, power) {
