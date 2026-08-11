@@ -13,7 +13,11 @@ const sum = function(numbers) {
   return numbers.reduce((acc, curr) => acc +=curr, 0);
 };
 
-const multiply = function() {
+const multiply = function(numbers) {
+  if((typeof start) == "undefined") {
+    start = 1;
+  }
+  return numbers.reduce((acc, curr) => acc = acc * curr, start);
 };
 
 const power = function() {
