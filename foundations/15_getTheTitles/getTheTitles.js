@@ -1,10 +1,6 @@
-const getTheTitles = function() {
-    let books = arguments[0];
-    let outputArray = [];
-    for (i = 0; i < books.length; i++) {
-        outputArray[i] = books[i].title;
-    }
-    return outputArray
+const getTheTitles = function(arr) {
+    console.log(arr[0].title);
+    return arr.map((obj) => obj.title);
 };
 
 // Do not edit below this line
