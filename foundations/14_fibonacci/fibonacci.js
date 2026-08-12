@@ -1,18 +1,18 @@
-const fibonacci = function() {
-    let fibo1 = 1;
-    let fibo2 = 0;
-    let fiboOutput = 0;
+const fibonacci = function(sequence) {
+    if(sequence == 0) return 0;
+    if(sequence == 1) return 1;
+    if(sequence < 0) return "OOPS";
 
-    if (arguments[0] < 0) {
-        return "OOPS";
+    firstPrev = 1;
+    secondPrev = 0;
+    console.log(sequence);
+
+    for(i = 1; i < sequence; i++) {
+        accumulation = firstPrev + secondPrev;
+        secondPrev = firstPrev;
+        firstPrev = accumulation;
     }
-    //In my head I'm envisioning the values sliding as they are used. fiboOutput => fibo2 => fibo1. fiboOutput is the result at the given sequence.
-    for (i = 0; i < arguments[0]; i++) {
-            fiboOutput = fibo1 + fibo2;
-            fibo1 = fibo2;
-            fibo2 = fiboOutput;
-    }
-    return fiboOutput;
+    return accumulation;
 };
 
 // Do not edit below this line
